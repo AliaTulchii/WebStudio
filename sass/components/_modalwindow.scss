@@ -1,0 +1,288 @@
+.backdrop {
+    position: fixed;    
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;    
+    
+    background: rgba(0, 0, 0, 0.2);
+    transition: opacity  250ms cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: scroll;
+
+    &.is-hidden {
+        opacity: 0;
+        pointer-events: none;
+        position: fixed;    
+        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+
+    
+}
+
+
+.modal {
+    
+    position: absolute;
+    width: 528px;
+    height: 581px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);    
+    
+    
+    background: $primary-bg-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    
+
+    @media screen and (min-width: 480px) {
+
+        width: 450px;
+        height: 609px;
+        margin-top: 93px;
+        margin-bottom: 94px;
+        
+    }
+}
+
+.modal-buttn{
+position: absolute;
+top:0%;
+right: 0%;
+}
+
+.buttn-cl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    margin-top: 8px;
+    margin-right: 8px;
+    cursor: pointer;
+    
+
+    border: none;
+    border-radius: 50%;
+    background-color: $primary-bg-color;
+    border: 1px solid rgba(0, 0, 0, 0.1);   
+    
+
+    &:hover,
+    &:focus {
+
+        .ector{
+            fill: $accent-color;
+        }
+    }
+}
+
+.ector {
+    display: inline-block;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
+.form {
+    margin: 40px;     
+
+}
+
+.form-title {
+margin-bottom: 30px;
+
+font-size: 20px;
+line-height: 0.87;
+text-align: center;
+letter-spacing: 0.03em;
+
+color: $title-text-color;
+}
+
+.form-field {
+display: flex;
+flex-direction: column;
+margin-bottom: 10px;
+position: relative;    
+}
+
+
+.form-label {
+
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 0.86;
+letter-spacing: 0.01em;
+
+margin-bottom: 4px;
+
+color: $paragraphs-color;
+
+}
+
+.form-input {
+box-sizing: border-box;
+
+width: 448px;
+height: 40px;
+padding-left: 42px;
+
+border: 1px solid rgba(33, 33, 33, 0.2);
+border-radius: 4px;
+
+transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+&:focus {
+    border-color: $accent-color;
+    outline: none;
+}
+
+@media screen and (min-width: 480px) {
+    width: 370px;
+    
+}
+}
+
+
+
+.input-icon {
+    position: absolute;    
+    top: 50%;
+    left: 20px;
+    transform: translate(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+
+
+
+.form-input:focus ~ .input-icon {
+   
+    fill: $accent-color;
+}
+
+
+.form-textarea {
+display: flex;
+flex-direction: column;
+margin-bottom: 20px;
+}
+
+.textarea {
+box-sizing: border-box;
+width: 448px;
+height: 120px;
+resize: none;
+
+border: 1px solid rgba(33, 33, 33, 0.2);
+border-radius: 4px;
+transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+&:focus {
+    border: 1px solid $accent-color;  
+    outline: none;
+}
+
+
+@media screen and (min-width: 480px) {
+    width: 370px;
+    
+}
+}
+
+
+
+textarea::placeholder {
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;      
+    
+    color: rgba(117, 117, 117, 0.5);    
+
+}
+
+.agree {
+width: 425px;
+height: 24px;
+margin-bottom: 30px;
+
+
+}
+
+.form-label {
+    display: flex;
+    align-items: center;
+
+}
+
+.checkbox {
+display: inline-block;
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+
+position: absolute;
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.checkbox-icon {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border: 2px solid $title-text-color;
+    border-radius: 2px;
+    margin-right: 7px;
+    transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+
+.checkbox:checked + .checkbox-icon {
+    border: 2px solid $accent-color;
+    background-color: $accent-color;
+    background-image: url(../images/icons.svg/icons/check.svg);
+    background-size: cover;
+    
+}
+
+.agree-link {
+    color: $accent-color;
+}
+
+.form-buttn {
+display: block;
+margin: 0 auto;
+width: 200px;
+height: 50px;
+
+border: none;
+background:$accent-color;
+color: $primary-bg-color;
+
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 1.88;
+letter-spacing: 0.06em;
+
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+border-radius: 4px;
+cursor: pointer;
+
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+&:hover,
+&:focus {
+    background-color: $button-color;
+}
+}
+
+

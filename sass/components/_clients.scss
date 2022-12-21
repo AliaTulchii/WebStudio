@@ -1,0 +1,140 @@
+
+.section.clients{
+    
+    // width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+
+    // @media screen and (min-width: 768px) {
+    //     width: 768px;
+    // }
+
+    // @media screen and (min-width: 1200px) {
+    //     width: 1200px;
+    // }
+
+}
+
+
+
+
+
+
+
+.list-clients {
+    
+    list-style: none;
+    gap: 30px;
+    text-align: center;
+   
+
+
+    @media screen and (min-width: 480px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+
+        @media screen and (max-width: 1199px) {
+            flex-wrap: wrap;
+            
+            
+        }
+        
+    }
+
+}
+
+.client {
+    @media screen and (min-width: 480px) {
+        text-align: center;
+    }
+}
+
+.style-box {
+    width: 210px;
+    height: 92px;
+    border: 1px solid $icon-color;
+    border-radius: 4px;
+    display: inline-block;
+    text-align: center;
+    
+    @media screen and (max-width:479px) {
+        
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+        
+    }
+    
+
+    &:hover,
+    &:focus {
+        border-color: $accent-color;
+    }
+
+    // &:not(:last-child) {
+    //     margin-right: 30px;
+    // }
+    
+
+    // flex-basis: calc(100% - 2 * 30px) / 2;        
+    // margin: 15px;
+
+
+
+    
+
+    @media screen and (min-width: 768px) {
+        width: 226px;          
+        // flex-basis: calc(100% - 3 * 30px) / 3;        
+        // margin-left: 15px;
+        
+      
+    }
+
+    
+    @media screen and (min-width: 1200px) {
+        width: 170px;
+        
+    }
+
+
+}
+
+
+
+.icon-client {
+    
+    fill: $icon-color;
+    width: 106px;
+    height: 60px;
+    position: relative;
+    display: inline-block;
+    margin: 16px 52px;
+    
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-width: 768px) {
+        margin: 16px 60px; 
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin: 16px 32px; 
+    }
+}
+
+.box-size {
+    display: flex;
+
+    &:hover,
+    &:focus {
+
+        .icon-client{
+            fill: $accent-color;
+        }
+    }
+}
+
+
+
